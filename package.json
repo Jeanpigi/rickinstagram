@@ -1,7 +1,7 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "author": "Jean Pierre <stick-master666@hotmail.com>",
   "license": "MIT",
   "scripts": {
@@ -10,16 +10,18 @@
     "start": "sirv public"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
-    "rollup": "^2.3.4",
+    "@rollup/plugin-replace": "^2.3.3",
+    "dotenv": "^8.2.0",
+    "rollup": "^2.18.2",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
-    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-terser": "^6.1.0",
     "svelte": "^3.0.0"
   },
   "dependencies": {
     "firebase": "^7.15.5",
-    "sirv-cli": "^0.4.4"
+    "sirv-cli": "^1.0.3"
   }
 }
