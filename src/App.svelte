@@ -1,6 +1,8 @@
 <script>
   import Characters from "./components/Characters.svelte";
+  import Sibar from "./components/Sidebar.svelte";
   import { onMount } from "svelte";
+  import Sidebar from "./components/Sidebar.svelte";
 
   const API = "https://rickandmortyapi.com/api/character";
 
@@ -19,6 +21,16 @@
     const response = await fetch(APIFILTER);
     data = await response.json();
     characters = data.results;
+  }
+
+  async function getRick() {
+    fetch("https://rickandmortyapi.com/api/character/1", {
+      method: "GET",
+      headers: {
+        "Context-Type": "application/json",
+      },
+      body: JSON.stringify({ name: "rick" }),
+    });
   }
 </script>
 
@@ -115,38 +127,37 @@
   }
 </style>
 
-<div>
-  <div class="header">
-    <div class="header-container">
-      <div class="header-content">
-        <div class="header-logo">
-          <h1>JBearP</h1>
-        </div>
-        <div class="search">
-          <input
-            class="search-c"
-            type="text"
-            name="search"
-            placeholder="Buscar personajes"
-            bind:value
-            on:keydown={onChangeInput} />
-        </div>
-        <div class="header-nav">
-          <ul>
-            <li>
-              <i class="fas fa-heart" />
-            </li>
-            <li>
-              <i class="fas fa-user-alt" />
-            </li>
-          </ul>
-        </div>
+<div class="header">
+  <div class="header-container">
+    <div class="header-content">
+      <div class="header-logo">
+        <h1>JBearP</h1>
+      </div>
+      <div class="search">
+        <input
+          class="search-c"
+          type="text"
+          name="search"
+          placeholder="Buscar personajes"
+          bind:value
+          on:keydown={onChangeInput} />
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li>
+            <i class="fas fa-heart" />
+          </li>
+          <li>
+            <i class="fas fa-user-alt" />
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="main">
-    <div class="main-container">
-      <Characters {characters} />
-    </div>
+</div>
+<div class="main">
+  <div class="main-container">
+    <Characters {characters} />
+    <Sidebar />
   </div>
 </div>

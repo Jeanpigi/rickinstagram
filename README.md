@@ -10,6 +10,8 @@ npx degit sveltejs/template svelte-app
 cd svelte-app
 ```
 
+Beside, the project is using another technology for save comments of rickinstagram which is Firebase. More info visit the official website [firebase](https://firebase.google.com/). Do not forget setting environment variables with dotenv in file firebase.js.
+
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
 
