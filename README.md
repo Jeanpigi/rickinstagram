@@ -1,12 +1,9 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
----
+# Rickinstagram app
 
-# svelte app
+This is a project was development with a svelte template, what goal is learn this technology. [Svelte](https://svelte.dev). It lives at https://rickinstagram.vercel.app.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+To create a new project similar to this one using template svelte-app [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
 npx degit sveltejs/template svelte-app
@@ -21,14 +18,14 @@ cd svelte-app
 Install the dependencies...
 
 ```bash
-cd svelte-app
-npm install
+cd rickinstagram
+npm install or yarn install
 ```
 
 ...then start [Rollup](https://rollupjs.org):
 
 ```bash
-npm run dev
+npm run dev or yarn run dev
 ```
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
@@ -41,7 +38,7 @@ By default, the server will only respond to requests from localhost. To allow co
 To create an optimised version of the app:
 
 ```bash
-npm run build
+npm run build or yarn run build
 ```
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
@@ -56,7 +53,10 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 ```js
 "start": "sirv public --single"
 ```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+Please make sure to update tests as appropriate.
 
 ## Deploying to the web
 
@@ -65,7 +65,7 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 Install `vercel` if you haven't already:
 
 ```bash
-npm install -g vercel
+npm install -g vercel or yarn add -G vercel
 ```
 
 Then, from within your project folder:
@@ -89,3 +89,9 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## Authors
+* **Jean Pierre Giovanni Arenas Ortiz** - *Initial work* -
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
