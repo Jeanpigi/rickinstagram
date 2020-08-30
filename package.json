@@ -5,24 +5,22 @@
   "author": "Jean Pierre <stick-master666@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --content-base  public"
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "export": "sapper export",
+    "start": "node __sapper__/build"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/polyfill": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
-    "babel-loader": "^8.1.0",
     "dotenv": "^8.2.0",
-    "html-webpack-plugin": "^4.4.1",
+    "sapper": "^0.28.3",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.13.6",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^4.44.1"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "firebase": "^7.15.5",
-    "sirv-cli": "^1.0.3"
+    "polka": "^0.5.2",
+    "sirv": "^1.0.6"
   }
 }

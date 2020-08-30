@@ -4,3 +4,7 @@
 .DS_Store
 
 .env
+
+#sapper
+src/node_modules
+__sapper__
